@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 # Define the ingredients for each recipe
 recipes = {
     "chocolate cake": {
-        "flour": 250,
+        "flour": 250, "grams"
         "sugar": 200,
         "cocoa powder": 50,
         "baking powder": 2,
@@ -76,4 +75,5 @@ for ingredient, amount in recipe.items():
 # Output the new ingredient amounts to the user
 print(f"\nNew ingredient amounts for {recipe_name.title()} for {num_people} people:")
 for ingredient, amount in new_recipe.items():
-    print(f"{ingredient}: {amount}")    
+    print(f"{ingredient}: {amount}", "grams")    
+

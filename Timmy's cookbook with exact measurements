@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+recipes = {
+	"chocolate cake": {
+		"flour": 224,
+		"sugar": 256,
+		"unsweetened cocoa powder": 96,
+		"baking powder": 8.53,
+		"baking soda": 8.53,
+		"salt": 5.69,
+		"eggs": 105,
+		"milk": 240,
+		"vegetable oil": 113,
+		"vanilla extract": 11.38,
+		"boiling water": 240, 
+        
+	},
+	"chicken alfredo": {
+		"spaghetti": 453.592,
+		"chicken breast": 348,
+		"olive oil": 17.07,
+		"garlic": 22,
+		"heavy cream": 400,
+		"parmesan cheese": 113,
+		"salt": 17.07,
+		"pepper": 2.84
+	},
+	"vegetable stir-fry": {
+		"rice": 500,
+		"soy sauce": 34.14,
+		"cornstarch": 17.07,
+		"sesame oil": 17.07,
+		"garlic": 17,
+		"ginger": 17.07,
+		"carrots": 71,
+		"broccoli": 128,
+		"red bell pepper": 149,
+		"snow peas": 98,
+		"water chestnuts": 226.796,
+		"green onions": 102
+	},
+	"lasagna": {
+		"lasagna noodles": 5448,
+		"ground beef": 453.59237,
+		"onion": 225,
+		"garlic": 11,
+		"tomato sauce": 368.544,
+		"water": 64,
+		"sugar": 34.14,
+		"dried basil": 8.53,
+		"salt": 8.53,
+		"ricotta cheese": 453.592,
+		"mozzarella cheese": 340.1942775,
+		"parmesan cheese": 62.3
+	},
+	"pancakes": {
+		"flour": 204,
+		"baking powder": 8.53,
+		"sugar": 17.07,
+		"salt": 1.42,
+		"milk": 425,
+		"egg": 50,
+		"butter": 51.18
+	}
+}
+
+recipe_name = input("Enter the name of the dish you want to make: ").lower()
+num_people = int(input("Enter the number of people you are cooking for: "))
+
+recipe = recipes[recipe_name]
+new_recipe = {}
+for ingredient, amount in recipe.items():
+	new_recipe[ingredient] = amount * num_people
+	
+print(f"\nNew ingredient amounts for {recipe_name.title()} for {num_people} people:")
+for ingredient, amount in new_recipe.items():
+	print(f"{ingredient}: {amount}")    

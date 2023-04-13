@@ -1,7 +1,7 @@
 # Define the ingredients for each recipe
 recipes = {
     "chocolate cake": {
-        "flour": 250, "grams"
+        "flour": 250, 
         "sugar": 200,
         "cocoa powder": 50,
         "baking powder": 2,

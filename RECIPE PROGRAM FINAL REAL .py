@@ -141,6 +141,6 @@ print(f"\nNew ingredient amounts for {recipe_name.title()} for {num_people} peop
 for ingredient, data in new_recipe.items():
 	print(f"{ingredient}: {data['amount']} {data['unit']}")
 print("\nInstructions:")
-for step in recipes[recipe_name]["instructions"]:
-	print(step)
+for i in recipes[recipe_name]["instructions"]:
+	print(i)
 	
